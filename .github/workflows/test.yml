@@ -2,11 +2,11 @@
 name: Test
 
 on:
- workflow_call:
+ workflow_dispatch:
 
 jobs:
   test:
-    runs-on: java_build
+    runs-on: githubrunner
     #needs: build  # Ensures test only runs after build succeeds
     steps:
       - name: Run Unit Tests
